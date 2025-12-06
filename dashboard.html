@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard HRD</title>
+
+  <!-- AdminLTE CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <!-- ChartJS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <!-- ================= NAVBAR ================= -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <span class="nav-link font-weight-bold">Dashboard HRD</span>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <span class="nav-link"><i class="fas fa-user"></i> Admin HRD</span>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <a href="#" class="brand-link text-center">
+        <span class="brand-text font-weight-bold">HRD</span>
+      </a>
+
+      <div class="sidebar">
+        <nav class="mt-4">
+          <ul class="nav nav-pills nav-sidebar flex-column">
+
+            <li class="nav-item">
+              <a class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>Data Karyawan</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link">
+                <i class="nav-icon fas fa-calendar-check"></i>
+                <p>Absensi</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link">
+                <i class="nav-icon fas fa-file-alt"></i>
+                <p>Izin & Cuti</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link">
+                <i class="nav-icon fas fa-business-time"></i>
+                <p>Lembur</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link">
+                <i class="nav-icon fas fa-chart-bar"></i>
+                <p>Laporan</p>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- ================= CONTENT ================= -->
+    <div class="content-wrapper p-4">
+      <!-- ================= MENU UTAMA HRD ================= -->
+      <h2>Menu Utama</h2>
+      <div class="row mt-4">
+        <!-- ========= DATA KARYAWAN ========= -->
+        <!-- ========= ABSENSI ========= -->
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm">
+            <div class="card-header bg-success d-flex align-items-center">
+              <i class="fas fa-calendar-check mr-2"></i>
+              <strong>Absensi</strong>
+            </div>
+            <div class="card-body p-0">
+              <ul class="list-group list-group-flush">
+
+                <li class="list-group-item menu-link">
+                  <i class="fa fa-angle-right text-success mr-2"></i>
+                  Absensi Harian
+                </li>
+
+                <li class="list-group-item menu-link">
+                  <i class="fa fa-angle-right text-success mr-2"></i>
+                  Rekap Absensi Bulanan
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm">
+            <div class="card-header bg-primary d-flex align-items-center">
+              <i class="fas fa-file-alt mr-2"></i>
+              <strong>Izin</strong>
+            </div>
+            <div class="card-body p-0">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item menu-link">
+                  <i class="fa fa-angle-right text-primary mr-2"></i>
+                  Pengajuan Izin Harian
+                </li>
+                <li class="list-group-item menu-link">
+                  <i class="fa fa-angle-right text-primary mr-2"></i>
+                  Pengajuan Izin Bulanan
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- ========= IZIN & CUTI ========= -->
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm">
+            <div class="card-header bg-warning d-flex align-items-center">
+              <i class="fas fa-file-alt mr-2"></i>
+              <strong>Cuti</strong>
+            </div>
+            <div class="card-body p-0">
+              <ul class="list-group list-group-flush">
+
+                <li class="list-group-item menu-link">
+                  <i class="fa fa-angle-right text-warning mr-2"></i>
+                  Rekap Cuti Bulanan
+                </li>
+
+                <li class="list-group-item menu-link">
+                  <i class="fa fa-angle-right text-warning mr-2"></i>
+                  Rekap Cuti Tahunan
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========= LEMBUR ========= -->
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm">
+            <div class="card-header bg-danger d-flex align-items-center">
+              <i class="fas fa-business-time mr-2"></i>
+              <strong>Lembur</strong>
+            </div>
+            <div class="card-body p-0">
+              <ul class="list-group list-group-flush">
+
+                <li class="list-group-item menu-link">
+                  <i class="fa fa-angle-right text-danger mr-2"></i>
+                  Rekap Lembur Harian
+                </li>
+
+                <li class="list-group-item menu-link">
+                  <i class="fa fa-angle-right text-danger mr-2"></i>
+                  Rekap Lembur Bulanan
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- HEADER -->
+      <h3 class="mb-4 font-weight-bold">Monitoring Kehadiran Karyawan</h3>
+
+      <!-- ================= STATISTIC BOX ================= -->
+      <div class="row">
+
+        <div class="col-lg-3 col-6">
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3>1.200</h3>
+              <p>Hadir Hari Ini</p>
+              <small>Target: 1.250</small>
+            </div>
+            <div class="icon"><i class="fas fa-user-check"></i></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <div class="small-box bg-danger">
+            <div class="inner">
+              <h3>45</h3>
+              <p>Terlambat</p>
+              <small>Naik dari kemarin</small>
+            </div>
+            <div class="icon"><i class="fas fa-user-clock"></i></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3>80</h3>
+              <p>Izin / Cuti</p>
+              <small>Dalam proses & disetujui</small>
+            </div>
+            <div class="icon"><i class="fas fa-calendar-minus"></i></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3>25</h3>
+              <p>Lembur Hari Ini</p>
+              <small>Total 132 Jam</small>
+            </div>
+            <div class="icon"><i class="fas fa-business-time"></i></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= GRAFIK ================= -->
+      <div class="row">
+        <!-- Grafik Bulanan (Line) -->
+        <div class="col-md-8">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Grafik Kehadiran Bulanan</h3>
+            </div>
+            <div class="card-body">
+              <canvas id="absensiBulanan"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Komposisi Kehadiran (Donut) - LEBIH DETAIL -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h3 class="card-title">Komposisi Kehadiran Hari Ini</h3>
+            </div>
+            <div class="card-body p-3">
+              <canvas id="donutChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= GRAFIK TERLAMBAT ================= -->
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div class="card card-danger">
+            <div class="card-header">
+              <h3 class="card-title">Terlambat per Divisi</h3>
+            </div>
+            <div class="card-body">
+              <canvas id="chartDivisi"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-outline card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Ringkasan Hari Ini</h3>
+            </div>
+            <div class="card-body row text-center">
+              <div class="col-md-3">
+                <h5>Tepat Waktu</h5>
+                <h3 class="text-success">1100</h3>
+              </div>
+              <div class="col-md-3">
+                <h5>Terlambat</h5>
+                <h3 class="text-danger">45</h3>
+              </div>
+              <div class="col-md-3">
+                <h5>Izin</h5>
+                <h3 class="text-warning">80</h3>
+              </div>
+              <div class="col-md-3">
+                <h5>Alpha</h5>
+                <h3 class="text-dark">12</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPT ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
+  <script>
+    // Warna asli kamu (dijaga persis seperti semula)
+    const hijau = '#28a745'; // Hadir
+    const kuning = '#ffc107'; // Izin
+    const biru = '#17a2b8'; // Sakit / Cuti
+    const merah = '#dc3545'; // Terlambat
+
+    // 1. Grafik Kehadiran Bulanan (Line) - tetap seperti aslinya + sedikit lebih halus
+    new Chart(document.getElementById('absensiBulanan'), {
+      type: 'line',
+      data: {
+        labels: ['1', '5', '10', '15', '20', '25', '30'],
+        datasets: [{
+            label: 'Hadir',
+            data: [300, 500, 700, 900, 1100, 1150, 1200],
+            borderColor: hijau,
+            backgroundColor: hijau,
+            fill: false,
+            tension: 0.3,
+            pointRadius: 4
+          },
+          {
+            label: 'Izin / Cuti / Sakit',
+            data: [20, 25, 30, 40, 55, 65, 80],
+            borderColor: kuning,
+            backgroundColor: kuning,
+            fill: false,
+            tension: 0.3,
+            pointRadius: 4
+          }
+        ]
+      },
+      options: {
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+
+    // 2. Donut Chart - SEKARANG LEBIH LENGKAP: Hadir, Izin, Sakit, Cuti, Terlambat
+    new Chart(document.getElementById('donutChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Hadir', 'Izin', 'Sakit', 'Cuti', 'Terlambat'],
+        datasets: [{
+          data: [1200, 40, 20, 20, 45], // Sesuaikan angka sesuai data real kamu
+          backgroundColor: [
+            hijau, // Hadir
+            kuning, // Izin
+            '#fd7e14', // Sakit (orange biar beda sedikit dari kuning, tetap hangat)
+            biru, // Cuti
+            merah // Terlambat
+          ],
+          borderColor: '#fff',
+          borderWidth: 3
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              padding: 20,
+              usePointStyle: true
+            }
+          }
+        }
+      }
+    });
+
+    // 3. Bar Chart Terlambat per Divisi - tetap merah seperti aslinya
+    new Chart(document.getElementById('chartDivisi'), {
+      type: 'bar',
+      data: {
+        labels: ['HRD', 'IT', 'Finance', 'Produksi', 'Marketing'],
+        datasets: [{
+          label: 'Terlambat',
+          data: [5, 12, 7, 18, 3],
+          backgroundColor: merah,
+          borderRadius: 5
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
